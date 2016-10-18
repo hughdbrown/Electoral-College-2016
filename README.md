@@ -23,24 +23,31 @@ match FiveThirtyEight’s simulation results.
 
 # Method
 1. Getting the standard deviation and the mean
+
     Given the left side of the bar and the width, and knowing that 
     the bar represents 80% of the outcomes, I set the mean to the midpoint
     of the bar and set the standard deviation to the width of the bar
     divided by the symmetric Z-score that captures 80% of outcomes (i.e.
     2 * 1.2816).
+
 2. Getting the probability of victory
+
     Given the mean, standard deviation, and the estiomated position
     of the 50% mark, I back out the Z-score that the candidate’s
     opponent’s popular vote must be below for the candidate to win.
     Given this Z-score, I can back out the probability of victory
     for the candidate.
+
 3. Simulating the districts
+
     Given the probability of winning for the candidate in each district,
     I sample from a linear distribution from 0 to 1. In the cases that
     a random linear variable exceeds the candidate’s probability of winning,
     the candidate loses that district. If the random linear variable is 
     below, then the candidate wins that district.
+
 4. The distribution of outcomes
+
     Having run the simulation millions of times, we obtain a distribution
     of electoral college results that we can plot. The count of outcomes
     are normalized against the number of simulations to produce 
