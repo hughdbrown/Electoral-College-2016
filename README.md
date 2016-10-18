@@ -46,3 +46,9 @@ match FiveThirtyEight’s simulation results.
     are normalized against the number of simulations to produce 
     projected Electoral College votes on the x-axis and the probability
     of that outcome on the y-axis.
+
+# FiveThirtyEight's method
+The method used by Nate Silver at FiveThirtyEight.com is markedly different from
+the method used here. In particular, Nate Silver samples from a Student t-distribution with
+10 degrees of freedom (instead of a Gaussian distribution) and performs more
+adjustments to the poll data. A complete description can be [found here](http://fivethirtyeight.com/features/a-users-guide-to-fivethirtyeights-2016-general-election-forecast/).
